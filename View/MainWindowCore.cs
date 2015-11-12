@@ -3,6 +3,7 @@ using Gtk;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
+
 namespace MeteMeTo
 {
 	public partial class MainWindow
@@ -18,8 +19,8 @@ namespace MeteMeTo
 			var date = this.en1.Text ;
 			var distance = this.en2.Text;
 			var time = this.en3.Text;
-
-			this.lb7.Text = Convert.ToString (Convert.ToDouble(distance)/Convert.ToDouble(time));
+			double avg = (Convert.ToDouble (distance)) / Convert.ToDouble (time);
+			this.lb7.Text = Convert.ToString (Math.Round(avg,2)) + " m/s";
 
 
 			if (isDate (date)) {

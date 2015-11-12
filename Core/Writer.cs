@@ -14,7 +14,7 @@ namespace MeteMeTo
 			Session session = new Session(start,duration,distance);
 
 			using (StreamWriter file = File.CreateText("./data.json"))
-			{
+			{ 
 				JsonSerializer serializer = new JsonSerializer();
 				serializer.Serialize(file, session);
 			}
