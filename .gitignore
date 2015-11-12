@@ -1,0 +1,10 @@
+# Backups
+*~
+*.bak
+# Binarios
+*.exe
+*.dll
+bin/
+obj/
+# Preferencias del usuario
+*.userprefs
