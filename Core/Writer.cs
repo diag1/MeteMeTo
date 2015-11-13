@@ -11,13 +11,16 @@ namespace MeteMeTo
 		}
 		public void insertarSesion (long start, long duration, int distance)
 		{  
+			System.Console.WriteLine (start);
+			System.Console.WriteLine (duration);
+			System.Console.WriteLine (distance);
+
 			Session session = new Session(start,duration,distance);
 
-			using (StreamWriter file = File.CreateText("./data.json"))
-			{ 
-				JsonSerializer serializer = new JsonSerializer();
-				serializer.Serialize(file, session);
-			}
+			string output = JsonConvert.SerializeObject(session);
+			System.Console.WriteLine (output);
+
+			File.WriteAllText ("./data.json", output);
 		}
 
 	}
