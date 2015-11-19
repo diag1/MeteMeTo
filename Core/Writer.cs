@@ -18,7 +18,8 @@ namespace MeteMeTo
 			Session session = new Session(start,duration,distance);
 
 			string output = JsonConvert.SerializeObject(session);
-			System.Console.WriteLine (output);
+
+			//System.Console.WriteLine (output);
 
 			File.WriteAllText ("./data.json", output);
 		}

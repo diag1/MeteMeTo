@@ -39,8 +39,12 @@ namespace MeteMeTo
 				this.lb2 = new Gtk.Label ("Dia de sesión (dd/mm/yyyy):");
 				this.en1 = new Gtk.Entry();
 
-		
 				this.en1.Alignment = 1;
+				this.lb4 = new Gtk.Label("Hora de la sesión (hh:mm):");
+				this.en4 = new Gtk.Entry("0");
+
+
+				this.en4.Alignment = 1;
 				this.lb3 = new Gtk.Label("Distancia (metros):");
 				this.en2 = new Gtk.Entry("0");
 				this.en2.Alignment = 1;
@@ -60,6 +64,9 @@ namespace MeteMeTo
 					// session day
 				vBoxMain.PackStart(this.lb2,true,false,5);
 				vBoxMain.PackStart(this.en1,true,false,5);
+					// session time
+				vBoxMain.PackStart(this.lb4,true,false,5);
+				vBoxMain.PackStart(this.en4,true,false,5);
 					//Distance
 				vBoxMain.PackStart(this.lb3,true,false,5);
 				vBoxMain.PackStart(this.en2,true,false,5);
@@ -90,10 +97,12 @@ namespace MeteMeTo
 		private Gtk.Entry en1;
 		private Gtk.Entry en2;
 		private Gtk.Entry en3;
+		private Gtk.Entry en4;
 
 		private Gtk.Label lb1;
 		private Gtk.Label lb2;
 		private Gtk.Label lb3;
+		private Gtk.Label lb4;
 		private Gtk.Label lb5;
 		private Gtk.Label lb6;
 		private Gtk.Label lb7;
