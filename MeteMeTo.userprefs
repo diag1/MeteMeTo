@@ -1,10 +1,12 @@
 ﻿<Properties StartupItem="MeteMeTo.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Functions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Writer.cs">
     <Files>
       <File FileName="Core/Fachada.cs" Line="1" Column="1" />
-      <File FileName="View/MainWindowCore.cs" Line="24" Column="4" />
-      <File FileName="Core/Functions.cs" Line="22" Column="37" />
+      <File FileName="View/MainWindowCore.cs" Line="20" Column="33" />
+      <File FileName="Core/Functions.cs" Line="9" Column="4" />
+      <File FileName="Core/Writer.cs" Line="10" Column="4" />
+      <File FileName="Core/Session.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
