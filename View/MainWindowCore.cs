@@ -16,26 +16,32 @@ namespace MeteMeTo
 
 		private void introduce ()
 		{
-			var date = this.en1.Text ;
+			//var date = this.en1.Text ;
 			var distance = this.en2.Text;
 			var time = this.en3.Text;
+			var seTime = this.en4.Text;
+
 			double avg = (Convert.ToDouble (distance)) / (60*Convert.ToDouble (time));
 			this.lb7.Text = Convert.ToString (Math.Round(avg,2)) + " m/s";
 
 
-			if (isDate (date)) {
+			/*if (isDate (date)) {
 				this.setDia (Convert.ToDateTime (date));
-			} 
+			} */
+			if (isTime (seTime)) {
+				// engadir horas e minutos a data.
+				this.setSeTime(Convert.ToDateTime(seTime));
+			//	Console.WriteLine (getSeTime());
+			}
 
-
-			DateTime date2 = getDia();
+			// DateTime date2 = getDia();
 			DateTime duration2 = dateToDatetimeMin (time);
 			int distance2 = int.Parse(distance);
 
-			fa.setSession (date2,duration2, distance2);
+			//fa.setSession (date2,duration2, distance2);
 
 		}
-		public DateTime dateToDatetime(String date){
+/*		public DateTime dateToDatetime(String date){
 			long toret=0;
 			String[] med;
 			int day = 3600 * 24;
@@ -69,6 +75,9 @@ namespace MeteMeTo
 			return t;
 		}
 
+	
+*/
+
 		public DateTime dateToDatetimeMin(String time){
 
 			long toret=0;
@@ -77,7 +86,7 @@ namespace MeteMeTo
 			return t;
 		}
 
-
+/*
 		private void setDia(DateTime en)
 		{
 			dia = en;
@@ -85,27 +94,41 @@ namespace MeteMeTo
 		private DateTime getDia(){
 			return dia;
 		}
+*/
+		private void setSeTime(DateTime en)
+		{
+			seTime = en;
+		}
+		private DateTime getSeTime(){
+			return seTime;
+		}
 
-		private DateTime dia;
-
+		private DateTime seTime;
+//		private DateTime dia;
+/*
 		private bool isDate(string a) 
 		{ //string estará en formato dd/mm/yyyy (dí­as < 32 y meses < 13)
 			Regex Val = new Regex(@"(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)");
 			return Val.IsMatch (a);
 		}
-
+		*/
+		private bool isTime(string a)
+		{  //string estará en formato hh:mm 
+			Regex Val = new Regex(@"([01]?[0-9]|2[0-3]):[0-5][0-9]");
+			return Val.IsMatch (a);
+		}
 		protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 		{
 			Application.Quit ();
 			a.RetVal = true;
 		}
 
-		private long ToEpochTime(DateTime date)
+/*		private long ToEpochTime(DateTime date)
 		{
 			var epoch = new DateTime (1970,1,1,0,0,0,DateTimeKind.Utc);
 			return Convert.ToInt64 ((date - epoch).TotalSeconds);
 		}	
-
+*/
 		public DateTime FromUnixTime(long unixTime)
 		{
 			var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);

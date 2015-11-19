@@ -36,15 +36,14 @@ namespace MeteMeTo
 				//widgets
 				this.lb1 = new Gtk.Label("INTRODUZCA SUS DATOS");
 				lb1.UseMarkup = true;
-				this.lb2 = new Gtk.Label ("Dia de sesión (dd/mm/yyyy):");
-				this.en1 = new Gtk.Entry();
+			//	this.lb2 = new Gtk.Label ("Dia de sesión (dd/mm/yyyy):");
+			//	this.en1 = new Gtk.Entry();
 
-				this.en1.Alignment = 1;
+			//	this.en1.Alignment = 1;
 				this.lb4 = new Gtk.Label("Hora de la sesión (hh:mm):");
 				this.en4 = new Gtk.Entry("0");
-
-
 				this.en4.Alignment = 1;
+
 				this.lb3 = new Gtk.Label("Distancia (metros):");
 				this.en2 = new Gtk.Entry("0");
 				this.en2.Alignment = 1;
@@ -62,8 +61,8 @@ namespace MeteMeTo
 				//vBox
 				vBoxMain.PackStart(this.lb1,true,false,5);
 					// session day
-				vBoxMain.PackStart(this.lb2,true,false,5);
-				vBoxMain.PackStart(this.en1,true,false,5);
+			//	vBoxMain.PackStart(this.lb2,true,false,5);
+			//	vBoxMain.PackStart(this.en1,true,false,5);
 					// session time
 				vBoxMain.PackStart(this.lb4,true,false,5);
 				vBoxMain.PackStart(this.en4,true,false,5);
@@ -92,15 +91,15 @@ namespace MeteMeTo
 
 		private Gtk.Button btSave;
 
-		private Functions fa;
+	//	private Functions fa;
 
-		private Gtk.Entry en1;
+	//	private Gtk.Entry en1;
 		private Gtk.Entry en2;
 		private Gtk.Entry en3;
 		private Gtk.Entry en4;
 
 		private Gtk.Label lb1;
-		private Gtk.Label lb2;
+	//	private Gtk.Label lb2;
 		private Gtk.Label lb3;
 		private Gtk.Label lb4;
 		private Gtk.Label lb5;
